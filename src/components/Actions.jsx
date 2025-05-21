@@ -18,12 +18,12 @@ function Actions() {
   const [tableEntries, setTableEntries] = useState([]);
   const [editingId, setEditingId] = useState(null);
 
-  // useEffect(() => {
-  //   const savedData = localStorage.getItem('tableEntries');
-  //   if (savedData) {
-  //     setTableEntries(JSON.parse(savedData));
-  //   }
-  // }, []);
+  useEffect(() => {
+    const savedData = localStorage.getItem('tableEntries');
+    if (savedData) {
+      setTableEntries(JSON.parse(savedData));
+    }
+  }, []);
 
   const handleInputChange = (event) => {
     const { name, value, type, checked } = event.target;
